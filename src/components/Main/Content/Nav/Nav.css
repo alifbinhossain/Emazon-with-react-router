@@ -1,0 +1,38 @@
+nav {
+  background-color: #000;
+  padding: 10px;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+nav a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  padding: 6px 12px;
+  transition: all 0.3s;
+  border-radius: 2px;
+  margin-right: 5px;
+}
+nav a:hover {
+  background-color: hsl(0, 0%, 57%);
+  color: #000;
+}
+.btn-cart {
+  display: inline-block;
+  text-decoration: none;
+  height: 40px;
+  width: 40px;
+  background-color: #ff9900;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  margin: 5px;
+  transition: all 0.3s;
+}
+.btn-cart:hover {
+  background-color: #fff;
+  color: #ff9900;
+  transform: skew(-7deg);
+}
