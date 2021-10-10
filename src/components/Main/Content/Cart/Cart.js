@@ -56,9 +56,7 @@ const Cart = (props) => {
         <span>Order Total:</span> <span>${total.toFixed(2)}</span>
       </h5>
       <div className="btn-box d-flex justify-content-between">
-        <button className="btn btn-dark" onClick={() => handleReview()}>
-          Review your product
-        </button>
+        {props.children}
         <button onClick={() => btnClear()} className="btn btn-danger">
           Clear all
         </button>

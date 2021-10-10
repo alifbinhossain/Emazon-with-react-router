@@ -1,15 +1,23 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import "./OrderReview.css";
 import useCart from "../../../hooks/useCart";
 import useProducts from "../../../hooks/useProducts";
 import Cart from "../Content/Cart/Cart";
 import ReviewItem from "./ReviewItem/ReviewItem";
-import { addToCart, deleteFromCart, updateDb } from "../../../utilities/fakedb";
+import {
+  addToCart,
+  clearTheCart,
+  deleteFromCart,
+} from "../../../utilities/fakedb";
+import { useHistory } from "react-router";
+import Overlay from "@restart/ui/esm/Overlay";
+import Button from "@restart/ui/esm/Button";
+import { Modal, Tooltip } from "bootstrap";
 
 const OrderReview = () => {
-  const [products, displayProducts, setProducts, setDisplayProducts] =
-    useProducts();
+  const [products] = useProducts();
   const [cart, setCart] = useCart(products);
+  const history = useHistory();
 
   const handleRemove = (key) => {
     const newCart = cart.filter((product) => product.key !== key);
@@ -28,6 +36,11 @@ const OrderReview = () => {
     setCart(newCart);
     console.log(cart);
     addToCart(key, isTrue);
+  };
+  const handlePlaceOrder = () => {
+    history.push("/placeorder");
+    setCart([]);
+    clearTheCart();
   };
   return (
     <section className="content-container pt-4">
@@ -61,7 +74,20 @@ const OrderReview = () => {
         </ul>
       </div>
       <div className="cart-container ps-4">
-        <Cart cart={cart} setCart={setCart}></Cart>
+        <Cart cart={cart} setCart={setCart}>
+          {cart.length ? (
+            <button
+              onClick={() => handlePlaceOrder()}
+              className="btn btn-success"
+            >
+              Place Order
+            </button>
+          ) : (
+            <button disabled className="btn btn-success">
+              Place Order
+            </button>
+          )}
+        </Cart>
       </div>
     </section>
   );

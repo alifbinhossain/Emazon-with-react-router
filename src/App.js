@@ -4,6 +4,7 @@ import Content from "./components/Main/Content/Content";
 import Header from "./components/Main/Header/Header";
 import Inventory from "./components/Main/Inventory/Inventory";
 import NotFound from "./components/Main/NotFound/NotFound";
+import OrderPlace from "./components/Main/OrderPlace/OrderPlace";
 import OrderReview from "./components/Main/OrderReview/OrderReview";
 
 function App() {
@@ -33,6 +34,10 @@ function App() {
           {/*-------------INVENTORY SECTION-----------*/}
           <Route path="/inventory">
             <Inventory></Inventory>
+          </Route>
+          {/*-------------PLACE ORDER----------*/}
+          <Route path="/placeorder">
+            <OrderPlace></OrderPlace>
           </Route>
 
           {/*------------NOT FOUND-----------*/}

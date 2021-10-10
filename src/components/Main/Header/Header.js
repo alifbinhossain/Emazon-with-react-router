@@ -1,7 +1,7 @@
 import React from "react";
 import "./Header.css";
 import logo from "../../../images/logo.png";
-import Nav from "../Content/Nav/Nav";
+import Nav from "../Nav/Nav";
 import { useState } from "react";
 import useProducts from "../../../hooks/useProducts";
 import useCart from "../../../hooks/useCart";

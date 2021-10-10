@@ -4,6 +4,7 @@ import Product from "./Product/Product";
 import Cart from "./Cart/Cart";
 import { useState } from "react";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Content = () => {
   const [products, setProducts] = useState([]);
@@ -58,7 +59,11 @@ const Content = () => {
           ))}
         </div>
         <div className="cart-container">
-          <Cart cart={cart} setCart={setCart}></Cart>
+          <Cart cart={cart} setCart={setCart}>
+            <Link to="/order">
+              <button className="btn btn-dark">Review Your Order</button>
+            </Link>
+          </Cart>
         </div>
       </section>
     </main>
