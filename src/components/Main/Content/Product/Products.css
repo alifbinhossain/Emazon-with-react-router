@@ -4,7 +4,7 @@
   margin: 15px 15px 30px;
   border-radius: 8px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-  border-left: 4px solid #ff9900;
+  border-left: 4px solid #fd7e14;
 }
 .product-poster {
   flex: 0 0 30%;
@@ -17,7 +17,7 @@
 }
 .product-title {
   font-size: 20px;
-  color: #ff9900;
+  color: #fd7e14;
   font-weight: 500;
 }
 .product-price {
@@ -31,7 +31,7 @@
 .btn-regular::before,
 .btn-regular::after {
   display: inline-block;
-  background-color: #ff9900;
+  background-color: #fd7e14;
   width: 180px;
   height: 30px;
   border: 1px solid grey;
@@ -64,7 +64,7 @@
   box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 .star {
-  color: #ff9900;
+  color: #fd7e14;
 }
 .feature-list {
   list-style: none;

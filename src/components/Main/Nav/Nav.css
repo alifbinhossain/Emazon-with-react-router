@@ -16,15 +16,14 @@ nav a {
   margin-right: 5px;
 }
 nav a:hover {
-  background-color: hsl(0, 0%, 57%);
-  color: #000;
+  color: #fd7e14;
 }
 .btn-cart {
   display: inline-block;
   text-decoration: none;
   height: 40px;
   width: 40px;
-  background-color: #ff9900;
+  background-color: #fd7e14;
   color: #fff;
   border: none;
   border-radius: 50%;
@@ -33,6 +32,6 @@ nav a:hover {
 }
 .btn-cart:hover {
   background-color: #fff;
-  color: #ff9900;
+  color: #fd7e14;
   transform: skew(-7deg);
 }

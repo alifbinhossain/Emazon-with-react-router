@@ -1,0 +1,133 @@
+.form {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.9),
+      rgba(0, 0, 0, 0.9)
+    ),
+    url(../../../images/login-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+.sign-form {
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+}
+.sign-left {
+  color: #fff;
+  position: relative;
+}
+.sign-greetings {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 10%;
+}
+.sign-greetings img {
+  width: 100%;
+}
+/* .sign-greetings h1 {
+  font-size: 50px;
+}
+.sign-greetings h2 {
+  font-size: 30px;
+  font-weight: 300;
+} */
+.sign-right {
+  color: #fff;
+  padding: 5% !important;
+}
+
+.form-input {
+  background-color: #77777777 !important;
+  color: #fd7e14 !important;
+  border: none !important;
+  padding: 4% 5% !important;
+}
+.form-input::placeholder {
+  color: #e1e1e1e1 !important;
+}
+.form-input:focus {
+  color: #dee3e4 !important;
+}
+.form-label {
+  color: #dee3e4 !important;
+}
+.text-more-option {
+  color: #dee3e4;
+  position: relative;
+}
+.text-more-option::before,
+.text-more-option::after {
+  content: "";
+  border: 1px solid #dee3e4;
+  position: absolute;
+  top: 50%;
+  width: 30%;
+  opacity: 0.2;
+}
+.text-more-option::before {
+  left: 0;
+}
+.text-more-option::after {
+  right: 0;
+}
+.btn-custom {
+  border: none;
+  padding: 3% 6%;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 500;
+  background-color: #fd7e14;
+}
+.btn-custom:active {
+  transform: scale(0.98);
+  box-shadow: 3px 2px 22px 1px rgba(255, 255, 255, 0.24);
+}
+
+.btn-social {
+  border: none;
+  margin: 5px;
+  font-size: 25px;
+  background-color: #fd7e14;
+  color: #fff;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-social i {
+  backface-visibility: hidden;
+  transition: all 0.2s ease;
+}
+.btn-social:hover i {
+  transform: scale(1.5) skew(-7deg) translate(5px, -5px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.switch-link {
+  color: #fd7e14;
+  text-decoration-color: #fd7e14;
+  transition: all 0.1s;
+}
+.switch-link:hover {
+  color: #fd7e14;
+}
+
+@media (max-width: 668px) {
+  .form {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+  .sign-left {
+    display: none;
+  }
+}

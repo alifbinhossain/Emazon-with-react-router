@@ -39,8 +39,8 @@ const OrderReview = () => {
   };
   const handlePlaceOrder = () => {
     history.push("/placeorder");
-    setCart([]);
-    clearTheCart();
+    // setCart([]);
+    // clearTheCart();
   };
   return (
     <section className="content-container pt-4">
