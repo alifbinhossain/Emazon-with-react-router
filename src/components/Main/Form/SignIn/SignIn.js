@@ -57,7 +57,6 @@ const SignIn = () => {
         <Col className="sign-left" md={7}>
           <div className="sign-greetings">
             <img src={image} alt="" />
-            {/* <h2>Get access to your Orders, Wishlist and Recommendations.</h2> */}
           </div>
         </Col>
         <Col md={5} className="sign-right">

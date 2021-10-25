@@ -7,7 +7,15 @@ import useAuth from "../../../../hooks/useAuth";
 import { useState } from "react";
 
 const SignUp = () => {
-  const { createNewUser } = useAuth();
+  const {
+    createNewUser,
+    signInWithAny,
+    facebookProvider,
+    googleProvider,
+    githubProvider,
+    twitterProvider,
+  } = useAuth();
+
   const [userEmail, setUserEmail] = useState("");
   const [userPassword, setUserPassword] = useState("");
   const [error, setError] = useState("");
@@ -16,6 +24,7 @@ const SignUp = () => {
   const location = useLocation();
   const redirectURL = location.state?.from || "/shop";
 
+  /* ----------------------------- CREATE NEW USER ---------------------------- */
   const emailChange = (e) => {
     setUserEmail(e.target.value);
   };
@@ -31,6 +40,16 @@ const SignUp = () => {
       })
       .catch((err) => setError(err.message));
   };
+
+  /* ------------------------ SIGN IN WITH SOCIAL LINKS ----------------------- */
+  const handleSignInWithAny = (provider) => {
+    signInWithAny(provider)
+      .then((result) => {
+        history.push(redirectURL);
+      })
+      .catch((err) => setError(err.message));
+  };
+
   return (
     <div className="sign-form container h-100">
       <Row md={2} xs={1} className=" h-100">
@@ -89,14 +108,29 @@ const SignUp = () => {
             Or with Social Profile
           </small>
           <div className="social-btn-box my-3 d-flex justify-content-center align-items-center">
-            <button className="btn-social">
+            <button
+              className="btn-social"
+              onClick={() => handleSignInWithAny(googleProvider)}
+            >
               <i class="fab fa-google"></i>
             </button>
-            <button className="btn-social">
+            <button
+              className="btn-social"
+              onClick={() => handleSignInWithAny(githubProvider)}
+            >
               <i class="fab fa-github"></i>
             </button>
-            <button className="btn-social">
+            <button
+              className="btn-social"
+              onClick={() => handleSignInWithAny(facebookProvider)}
+            >
               <i class="fab fa-facebook"></i>
+            </button>
+            <button
+              className="btn-social"
+              onClick={() => handleSignInWithAny(twitterProvider)}
+            >
+              <i class="fab fa-twitter"></i>
             </button>
           </div>
 

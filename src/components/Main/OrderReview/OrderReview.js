@@ -1,22 +1,12 @@
-import React, { useRef, useState } from "react";
 import "./OrderReview.css";
 import useCart from "../../../hooks/useCart";
-import useProducts from "../../../hooks/useProducts";
 import Cart from "../Content/Cart/Cart";
 import ReviewItem from "./ReviewItem/ReviewItem";
-import {
-  addToCart,
-  clearTheCart,
-  deleteFromCart,
-} from "../../../utilities/fakedb";
+import { addToCart, deleteFromCart } from "../../../utilities/fakedb";
 import { useHistory } from "react-router";
-import Overlay from "@restart/ui/esm/Overlay";
-import Button from "@restart/ui/esm/Button";
-import { Modal, Tooltip } from "bootstrap";
 
 const OrderReview = () => {
-  const [products] = useProducts();
-  const [cart, setCart] = useCart(products);
+  const [cart, setCart] = useCart();
   const history = useHistory();
 
   const handleRemove = (key) => {
